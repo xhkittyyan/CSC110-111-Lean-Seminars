@@ -8,7 +8,6 @@ example (a b c d e f : ℝ) (h : a * b = c * d) (h' : e = f) :
 begin
   rw h',
   rw ←mul_assoc,
-  rw h,
-  rw mul_assoc,
+  sorry, 
 end
 -- END

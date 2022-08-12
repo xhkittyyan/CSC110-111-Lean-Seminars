@@ -20,13 +20,8 @@ by rw [add_comm, zero_add]
 
 theorem add_right_neg (a : R) : a + -a = 0 :=
 begin 
-  rw add_comm,
-  rw add_left_neg,
+  sorry,
 end
-
-/- A shorter proof -/
-example (a : R) : a + -a = 0 :=
-by rw [add_comm, add_left_neg]
 
 end my_ring
 

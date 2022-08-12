@@ -75,5 +75,4 @@ section
 #check mul_comm a b
 #check mul_comm b a 
 end
-
 --END

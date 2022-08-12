@@ -7,7 +7,7 @@ variables a b c : ℝ
 
 example (a b c : ℝ) : (a * b) * c = b * (a * c) :=
 begin
-  rw mul_comm a b,
+  rw mul_comm a b, 
   /- mul_comm a b refers to the communicative law for multiplication 
   on a and b: a * b = b * a. 'rw mul_comm a b' tells Lean to replace
   a * b with b * a in the goal. -/
