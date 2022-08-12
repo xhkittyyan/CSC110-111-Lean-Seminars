@@ -1,6 +1,8 @@
 import data.real.basic
 import algebra.ring
 import algebra.group
+import analysis.special_functions.exp
+import analysis.special_functions.log.base
 
 -- BEGIN
 section

@@ -1,6 +1,6 @@
 import data.real.basic
 
-lemma fst_of_two_props : ∀ P Q : Prop, P → Q → P := 
+example : ∀ P Q : Prop, P → Q → P := 
 
 /- In Lean, the implication arrow → is right-associative. 
   P → Q → P in fact refers to P → (Q → P). -/
@@ -19,14 +19,13 @@ begin
   but fixed value of the bound variable. -/
 
   intros hp hq,
-  /- The 'intros hp hq' tactic introduces the hypothesis of P called hp and 
-  the hypothesis of Q called hq to the local context and assumes that they 
-  are true. In other words, we assume that P is true and Q is true, and we want 
-  to prove P is true. Indeed, to prove an implication, it suffices to take its 
-  left-hand side as the hypothesis and prove its right-hand side true. -/
+  /- The 'intros hp hq' tactic introduces the proof of P called hp and 
+  the proof of Q called hq to the local context. In other words, we assume that 
+  P is true and Q is true, and we want to prove P is true. Indeed, to prove an 
+  implication, it suffices to take its left-hand side as the hypothesis and prove 
+  its right-hand side true. -/
   
   exact hp,
-  /- hp suffices to prove P because hp is the hypothesis of P assumed true. 
-  The 'exact hp' tactic tells Lean that hp is exactly needed to achieve and close
-  the goal. -/
+  /- hp suffices to prove P because hp is the proof of P. The 'exact hp' tactic 
+  tells Lean that hp is exactly needed to achieve and close the goal. -/
 end
