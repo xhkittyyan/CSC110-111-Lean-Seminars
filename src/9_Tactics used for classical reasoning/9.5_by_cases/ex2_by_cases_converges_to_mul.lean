@@ -40,8 +40,6 @@ begin
   cases (cs (ε / |c|) ε'pos) with N hN,
   use N,
   intros n hn,
-    intros n hn, 
-  intros n hn,
   specialize hN n hn,
   rw ← mul_sub,
   rw abs_mul,
