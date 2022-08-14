@@ -33,6 +33,8 @@ end
 variables a b c d: ℝ
 variables (h : a ≤ b) (h' : b ≤ c)
 
+open real
+
 #check (le_refl : ∀ a : real, a ≤ a)
 #check (le_refl a : a ≤ a)
 #check (le_trans : a ≤ b → b ≤ c → a ≤ c)
