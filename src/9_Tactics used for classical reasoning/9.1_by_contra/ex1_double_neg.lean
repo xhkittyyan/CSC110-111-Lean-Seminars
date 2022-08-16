@@ -37,7 +37,7 @@ begin
 end
 -- END
 
-/- Proof 1: Double negation -/
+/- Tactic Proof 1: Double negation -/
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro h,
@@ -47,16 +47,16 @@ begin
   exact hP,
 end
 
-/- Proof 2: Double negation -/
+/- Tactic Proof 2: Double negation -/
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro hnnp,
-  by_contra h', 
+  by_contra h, 
   apply hnnp,
-  exact h',
+  exact h,
 end
 
-/- Proof 3: Double negation -/
+/- Tactic Proof 3: Double negation -/
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro h,
@@ -65,7 +65,7 @@ begin
   contradiction,
 end
 
-/- Proof 4: Double negation -/
+/- Tactic Proof 4: Double negation -/
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro h,
@@ -73,3 +73,16 @@ begin
   { assumption },
   contradiction
 end
+
+/- Term Proof 1: Double negation -/
+example (P : Prop) (h : ¬ ¬ P) : P :=
+by_contradiction
+  (assume h1 : ¬ P,
+    show false, from h h1)
+
+open classical
+/- Term Proof 2: Double negation -/
+example (P : Prop) (h : ¬ ¬ P) : P :=
+by_cases
+  (assume h1 : P, h1)
+  (assume h1 : ¬ P, absurd h1 h)
