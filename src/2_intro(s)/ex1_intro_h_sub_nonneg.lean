@@ -1,9 +1,11 @@
-import algebra.ring.aut
+import algebra.order.ring
 
-variables {R : Type*} [ring R]
+variables {R : Type*} [ordered_ring R]
 variables a b c : R
 
 #check sub_nonneg
+#check sub_nonneg.mp
+#check sub_nonneg.mpr
 
 -- BEGIN
 example : 0 ≤ b - a → a ≤ b := 
