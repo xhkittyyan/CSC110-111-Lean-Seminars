@@ -20,8 +20,7 @@ begin
     exact (hqr (hpq (hp))),
 end
 
-/- Alternatively -/
-
+-- Alternatively 
 example : (P → Q) ∧ (Q → R) → (P → R) :=
 begin
     intro h,
@@ -30,8 +29,7 @@ begin
     apply hqr (hpq hp),
 end
 
-/- Alternatively -/
-
+-- Alternatively 
 theorem basic_logic : (P → Q) ∧ (Q → R) → (P → R) :=
 begin
     intros h,
@@ -46,8 +44,7 @@ begin
     exact hqr hq,
 end
 
-/- Alternatively -/
-
+-- Alternatively 
 example : (P → Q) ∧ (Q → R) → (P → R) :=
 begin
     intros h,

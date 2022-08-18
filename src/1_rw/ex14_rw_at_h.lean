@@ -8,6 +8,8 @@ variables a b c d : ℝ
 #check two_mul (a + d)
 
 -- BEGIN
+/- The rewrite tactic affects only the goal. The notation rw t at h 
+applies the rewrite t at hypothesis h. -/
 
 example (a b c d : ℝ) (hyp : c = d * a + b) (hyp' : b = a * d) :
   c = 2 * a * d :=
