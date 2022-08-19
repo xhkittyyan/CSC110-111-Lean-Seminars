@@ -48,12 +48,23 @@ begin
 end
 
 /- Tactic Proof 2: Double negation -/
+
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro hnnp,
+  /- introduce the proof of ¬¬P, denoted as hnnp. -/
   by_contra h, 
+  /- 'by_contra h' creates the negation of what is to 
+     be proved, namely h: ¬P, and tells Lean to prove
+     false by finding a contradiction. -/
   apply hnnp,
+  /- ¬¬P is equivalent to ¬P → false. The apply tactic 
+     transforms the current goal to sufficient conditions. 
+     'apply hnnp' (hnnp: ¬¬P) matches the goal ⊢ false 
+     and leaves the hypothesis ¬P as a new goal. As a 
+     result, the goal changes from ⊢ false to ⊢ ¬P. -/
   exact h,
+  /- use the proof of ¬P (h) to prove ¬P. -/
 end
 
 /- Tactic Proof 3: Double negation -/
