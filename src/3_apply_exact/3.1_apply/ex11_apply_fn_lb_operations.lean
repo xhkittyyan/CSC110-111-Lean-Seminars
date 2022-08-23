@@ -25,9 +25,7 @@ example (nnf : fn_lb f 0) (nng : fn_lb g 0) :
 begin
   intro x,
   dsimp,
-  apply mul_nonneg,
-  apply nnf,
-  apply nng,
+  sorry,
 end
 
 
@@ -37,11 +35,7 @@ example (hfa : fn_ub f a) (hfb : fn_ub g b)
 begin
   intro x,
   dsimp,
-  apply mul_le_mul,
-  apply hfa,
-  apply hfb,
-  apply nng,
-  apply nna,
+  sorry,
 end
 
 -- END

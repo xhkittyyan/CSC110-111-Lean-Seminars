@@ -15,8 +15,8 @@ variables a b c : ℝ
 example (h : a ≤ b) : c - exp b ≤ c - exp a :=
 begin
   apply sub_le_sub,
-    apply le_refl,
-  apply exp_le_exp.mpr h,
+    sorry,
+  sorry,
 end
 
 -- END

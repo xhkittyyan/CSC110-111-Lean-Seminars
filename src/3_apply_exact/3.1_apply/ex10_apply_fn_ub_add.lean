@@ -14,7 +14,6 @@ begin
   intro x,
   dsimp,
   apply add_le_add,
-  apply hfa,
-  apply hgb,
+  sorry,
 end
 -- END
