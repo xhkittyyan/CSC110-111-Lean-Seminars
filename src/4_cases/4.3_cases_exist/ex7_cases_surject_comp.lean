@@ -14,7 +14,6 @@ begin
   cases surjg z with y h1,
   cases surjf y with x h2,
   use x,
-  rw h2,
-  rw h1,
+  sorry,
 end
 -- END

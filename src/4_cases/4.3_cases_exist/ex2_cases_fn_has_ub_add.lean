@@ -19,11 +19,7 @@ example : fn_has_ub f → fn_has_ub g →
   fn_has_ub (λ x, f x + g x) :=
 begin
   intros ubf ubg,
-  cases ubf with a ubfa, 
-  cases ubg with b ubgb,
-  use a + b,
-  apply fn_ub_add ubfa ubgb,
+  sorry,
 end
-
 
 -- END

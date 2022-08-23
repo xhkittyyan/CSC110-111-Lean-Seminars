@@ -1,5 +1,7 @@
 import tactic
 
+#check dvd_mul_right
+
 -- BEGIN
 
 example {m n k : ℕ} (h : m ∣ n ∨ m ∣ k) : m ∣ n * k :=
@@ -12,7 +14,7 @@ begin
     rw mul_assoc,
     apply dvd_mul_right,
   cases hmk with b hb,
-  /- instantiate the existential quantifier b in hb -/
+    /- instantiate the existential quantifier b in hb -/
     rw hb,
     rw mul_comm, 
     rw mul_assoc,

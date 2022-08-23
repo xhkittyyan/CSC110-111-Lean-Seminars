@@ -13,10 +13,7 @@ variables {f g : ℝ → ℝ}
 example (lbf : fn_has_lb f) (lbg : fn_has_lb g) :
   fn_has_lb (λ x, f x + g x) :=
 begin
-  cases lbf with a lbfa,
-  cases lbg with b lbgb,
-  use a + b,
-  apply add_le_add lbfa lbgb,
+  sorry,
 end
 
 -- END
