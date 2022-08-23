@@ -1,12 +1,17 @@
 import tactic
+#check dvd_mul_right
 
 -- BEGIN
 example {m n k : ℕ} (h : m ∣ n ∨ m ∣ k) : m ∣ n * k :=
 begin
   rcases h with ⟨a, rfl⟩ | ⟨b, rfl⟩,
-  { rw [mul_assoc],
+    /- rfl expects the hypothesis to be h : a = b, and calls on the 
+    hypothesis, which has the effect of replacing b with a everywhere 
+    or vice versa. -/
+  { rw mul_assoc,
     apply dvd_mul_right },
-  rw [mul_comm, mul_assoc],
+  rw mul_comm, 
+  rw mul_assoc,
   apply dvd_mul_right,
 end
 
