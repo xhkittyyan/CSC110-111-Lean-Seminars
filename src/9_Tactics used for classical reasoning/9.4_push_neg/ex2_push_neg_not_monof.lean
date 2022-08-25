@@ -11,8 +11,7 @@ variable (f : ℝ → ℝ)
 example (h : ¬ monotone f) : ∃ x y, x ≤ y ∧ f y < f x :=
 begin
   simp only [monotone] at h,
-  push_neg at h,
-  exact h,
+  sorry,
 end
 
 /- The rw tactic also unpacks a definition, which is equivalent to 
@@ -20,9 +19,6 @@ end
 example : ¬ monotone (λ x : ℝ, -x) :=
 begin
   rw monotone, 
-  push_neg,
-  use -2,
-  use -1,
-  norm_num,
+  sorry,
 end
 -- END
