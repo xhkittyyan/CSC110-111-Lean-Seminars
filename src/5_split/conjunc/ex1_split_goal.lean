@@ -1,6 +1,14 @@
 import data.real.basic
 
 -- BEGIN
+
+example (P Q : Prop) (hp : P) (hq : Q) : P ∧ Q :=
+begin 
+  split, 
+  { exact hp, },
+  { exact hq, },
+end
+
 example {x y : ℝ} (h₀ : x ≤ y) (h₁ : ¬ y ≤ x) : x ≤ y ∧ x ≠ y :=
 begin
   split,

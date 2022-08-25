@@ -1,0 +1,9 @@
+import tactic
+
+
+example (hp : p) (hq : q) : p ∧ q :=
+begin 
+  split, 
+  { exact hp, },
+  { exact hq, },
+end
