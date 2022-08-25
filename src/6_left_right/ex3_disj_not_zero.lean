@@ -7,10 +7,8 @@ example {x : ℝ} (h : x ≠ 0) : x < 0 ∨ x > 0 :=
 begin
   cases lt_trichotomy x 0 with xlt xle,
     left,
-    exact xlt,
-      cases xle with xeq xlt,
-      contradiction,
+    { sorry,},
     right,
-    exact xlt,
+    sorry,
 end
 -- END

@@ -1,4 +1,5 @@
 import data.real.basic
+#check pow_two_nonneg
 
 variables {x y : ℝ}
 
@@ -15,6 +16,7 @@ begin
   linarith [pow_two_nonneg x],
 end
 
+--Alternatively
 example (h : y > 0) : y > 0 ∨ y < -1 :=
 or.inl h
 

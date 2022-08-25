@@ -11,12 +11,8 @@ example : x < abs y → x < y ∨ x < -y :=
 begin
   cases le_or_gt 0 y with h1 h2, 
   { rw abs_of_nonneg h1,
-    intro h, 
-    left, 
-    exact h },
+    sorry, },
   rw abs_of_neg h2,
-  intro h, 
-  right, 
-  exact h,
+  sorry,
 end
 -- END
