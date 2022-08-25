@@ -7,7 +7,9 @@ open nat
 example : ∃ x : ℝ, 2 < x ∧ x < 4 :=
 begin
   use 5 / 2,
-  split; norm_num,
+  split, 
+  norm_num,
+  norm_num,
 end
 
 example : ∃ m n : ℕ,

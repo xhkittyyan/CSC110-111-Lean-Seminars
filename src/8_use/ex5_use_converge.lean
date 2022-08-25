@@ -19,7 +19,6 @@ begin
   intros ε εpos,
   use 0,
   intros n nge, dsimp,
-  rw [sub_self, abs_zero],
-  exact εpos,
+  sorry,
 end
 -- END
