@@ -5,8 +5,7 @@ import data.real.basic
 example {x y : ℝ} (h₀ : x ≤ y) (h₁ : ¬ y ≤ x) : x ≤ y ∧ x ≠ y :=
 begin
   have h : x ≠ y,
-  { contrapose! h₁,
-    rw h₁ },
+  { sorry, },
   exact ⟨h₀, h⟩,
 end
 
@@ -14,8 +13,7 @@ example {x y : ℝ} (h₀ : x ≤ y) (h₁ : ¬ y ≤ x) : x ≤ y ∧ x ≠ y :
 begin
   split,
     exact h₀,
-  contrapose! h₁,
-    rw h₁, 
+  sorry,
 end
 
 /- using λ abstraction-/
