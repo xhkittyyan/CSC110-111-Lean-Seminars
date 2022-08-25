@@ -2,7 +2,7 @@ import tactic
 
 variables P Q R :  Prop
 
-theorem basic_logic : (P → Q) ∧ (Q → R) → (P → R) :=
+example : (P → Q) ∧ (Q → R) → (P → R) :=
 begin
     intros h,
     have hpq : P → Q,
@@ -16,6 +16,7 @@ begin
     exact hqr hq,
 end
 
+-- Alternatively 
 example : (P → Q) ∧ (Q → R) → (P → R) :=
 begin
     intros h,

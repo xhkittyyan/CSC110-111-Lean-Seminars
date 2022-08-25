@@ -1,9 +1,10 @@
 import algebra.order.ring
 
+#check sub_nonneg
+#check sub_mul
+
 variables {R : Type*} [ordered_ring R]
 variables a b c : R
-
-/- NOTE: No `by_cases` used. May need to relocate. -/
 
 example (h : a ≤ b) (h' : 0 ≤ c) : a * c ≤ b * c := 
 begin
