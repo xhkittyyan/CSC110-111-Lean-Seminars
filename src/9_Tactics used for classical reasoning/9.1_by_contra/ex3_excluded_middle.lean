@@ -14,9 +14,9 @@ example (A B : Prop) : (A → B) ↔ (¬ B → ¬ A) :=
 begin
     split,
     intros hab nb,
-        sorry,  
+      { sorry, },   
     intros hnba ha,
-        sorry, 
+      { sorry, },   
 end
 
 /- Alternatively, a term proof -/
