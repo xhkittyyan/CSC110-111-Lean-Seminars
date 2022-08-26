@@ -23,11 +23,10 @@ variables (P Q : Prop)
 example (h : ¬ ¬ Q) : Q :=
 begin
   by_contra h', 
-  /- assume that the negation of the conclusion "Q" is true:
+  /- assume that the negation of Q is true:
     "h' : ¬ Q" and prove it false -/
-  apply h, 
-  /- apply ¬¬Q is true -/
-  exact h',
+  exact h h',
+  /- A contradiction is found in h and h' -/
 end
 
 example (h : Q) : ¬ ¬ Q :=
@@ -41,14 +40,11 @@ end
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro h,
-  change ¬P → false at h,
-  by_contra hP,
-  apply h,
-  exact hP,
+  by_contra h',
+  exact h h',
 end
 
 /- Tactic Proof 2: Double negation -/
-
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro hnnp,
@@ -77,6 +73,16 @@ begin
 end
 
 /- Tactic Proof 4: Double negation -/
+example (P : Prop) : ¬ ¬ P → P :=
+begin
+  intro h,
+  change ¬P → false at h,
+  by_contra hP,
+  apply h,
+  exact hP,
+end
+
+/- Tactic Proof 5: Double negation -/
 example (P : Prop) : ¬ ¬ P → P :=
 begin
   intro h,
