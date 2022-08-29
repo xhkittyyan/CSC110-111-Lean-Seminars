@@ -5,7 +5,7 @@ begin
     intros h,
     cases h with hpq hqr,
     intro hp,
-    exact (hqr (hpq (hp))),
+    exact hqr (hpq hp),
 end
 
 /- Alternatively -/

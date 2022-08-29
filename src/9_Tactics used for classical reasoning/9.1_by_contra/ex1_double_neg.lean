@@ -39,9 +39,15 @@ end
 /- Tactic Proof 1: Double negation -/
 example (P : Prop) : ¬ ¬ P → P :=
 begin
-  intro h,
-  by_contra h',
-  exact h h',
+  intro hnnp,
+  /- introduce the proof of ¬¬P, denoted as hnnp -/
+  by_contra h,
+  /- 'by_contra h' creates the negation of what is to 
+     be proved, namely h: ¬P, and tells Lean to prove
+     false by finding a contradiction -/
+  exact hnnp h,
+  /- A contradiction is found in hnnp (¬¬P) and h (¬P):  
+     they cannot be true at the same time -/
 end
 
 /- Tactic Proof 2: Double negation -/
