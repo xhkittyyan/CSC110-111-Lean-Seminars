@@ -13,7 +13,7 @@ begin
 end
 
 example : ∃ m n : ℕ,
-  4 < m ∧ m < n ∧ n < 10 ∧ prime m ∧ prime n :=
+  4 < m ∧ m < n ∧ n < 10 ∧ nat.prime m ∧ nat.prime n :=
 begin
   use [5, 7],
   split; norm_num
