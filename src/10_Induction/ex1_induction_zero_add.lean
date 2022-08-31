@@ -1,6 +1,8 @@
 import data.real.basic
 
-open nat 
+open nat
+
+#check add_succ
 
 example (n : ℕ) : 0 + n = n :=
 begin
