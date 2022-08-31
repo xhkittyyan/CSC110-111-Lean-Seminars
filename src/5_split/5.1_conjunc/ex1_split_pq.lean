@@ -1,7 +1,7 @@
 import tactic
 
 
-example (hp : p) (hq : q) : p ∧ q :=
+example (P Q : Prop) (hp : P) (hq : Q) : P ∧ Q :=
 begin 
   split, 
   { exact hp, },
