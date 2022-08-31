@@ -4,7 +4,7 @@ open nat
 
 --BEGIN
 
-example (a b c : ℕ) : (a * b) * c = a * (b * c) :=
+example (a b : ℕ) : a * b = b * a :=
 begin
  sorry,
 end 
