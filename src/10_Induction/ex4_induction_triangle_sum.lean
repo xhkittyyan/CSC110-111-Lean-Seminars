@@ -2,7 +2,7 @@ import tactic
 open_locale big_operators
 open finset
 
-example (n : ℕ) : ∑ i in range (n + 1), i = n * (n + 1) / 2 :=
+theorem sum_id (n : ℕ) : ∑ i in range (n + 1), i = n * (n + 1) / 2 :=
 begin
   symmetry, 
   apply nat.div_eq_of_eq_mul_right (by norm_num : 0 < 2),
