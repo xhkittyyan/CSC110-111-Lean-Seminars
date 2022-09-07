@@ -9,7 +9,7 @@ variables {x d f g : ℤ}
 variables {a b c : ℕ}
 
 -- BEGIN
-/- Prove that for all d ∈ ℤ, and for all x ∈ ℤ, if x devides x + d, 
+/- Prove that for all d ∈ ℤ, and for all x ∈ ℤ, if x divides x + d, 
    then x also divides d. -/
 example (divxd : x ∣ x + d) : x ∣ d :=
 begin
