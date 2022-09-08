@@ -14,14 +14,10 @@ variables {a b c : ℕ}
 example (divxd : x ∣ x + d) : x ∣ d :=
 begin
   cases divxd with f beq,
-  have h : x ∣ x,
-  use 1,
-  rw mul_one,
-  cases h with g xeq,
-  use (f - g),
+  use f - 1,
   rw mul_sub,
-  rw  [←beq, ← xeq],
-  rw add_sub_cancel' x d,
+  rw ← beq,
+  rw [mul_one, add_sub_cancel' x d], -- or, ring
 end
 
 /- A similar proof: prove that for all a, b, c ∈ ℕ, if a ∣ b and a ∣ c, 
