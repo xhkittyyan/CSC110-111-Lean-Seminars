@@ -2,6 +2,10 @@ import tactic
 open_locale big_operators
 open finset
 
+#check mul_add
+#check sum_range_succ
+#check nat.succ_eq_add_one
+
 theorem sum_id (n : ℕ) : ∑ i in range (n + 1), i = n * (n + 1) / 2 :=
 begin
   symmetry, 
