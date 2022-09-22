@@ -5,6 +5,7 @@ import analysis.special_functions.pow
 
 def rational (x : ℝ) := ∃ a b : ℤ, x = ↑a / ↑b
 
+-- Prove that there exists a and b that are irrationals such that a ^ b is rational.
 example : ∃ a b : ℝ, irrational a ∧ irrational b ∧ rational (a ^ b) :=
 /- A paper-pencil proof:
    Let c = √2 ^ √2. 
