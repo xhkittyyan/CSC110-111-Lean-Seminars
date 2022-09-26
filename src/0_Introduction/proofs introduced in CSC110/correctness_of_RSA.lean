@@ -8,8 +8,9 @@ open nat
 def encrypt (e n m : ℕ) := m ^ e % n
 def decrypt (d n m : ℕ) := m ^ d % n
 
-theorem RSA_correct (n d e m : ℕ) (h₁ : ∃ k : ℕ, e * d = n.totient * k + 1) (h₂ : m.coprime n) :
-  decrypt d n (encrypt e n m) ≡ m [MOD n] :=
+theorem RSA_correct (n d e m : ℕ) (h₁ : ∃ k : ℕ, e * d = n.totient * k + 1) 
+        (h₂ : m.coprime n) :
+        decrypt d n (encrypt e n m) ≡ m [MOD n] :=
 begin
   rw [encrypt, decrypt],
   rw ← pow_mod,
