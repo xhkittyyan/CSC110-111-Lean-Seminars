@@ -9,7 +9,7 @@ variables {x d f g : ℤ}
 variables {a b c : ℕ}
 
 -- BEGIN
-/- Prove that for all d ∈ ℤ, and for all x ∈ ℤ, if x divides x + d, 
+/- Prove that for x, d ∈ ℤ, if x divides x + d, 
    then x also divides d. -/
 example (divxd : x ∣ x + d) : x ∣ d :=
 begin
@@ -20,7 +20,7 @@ begin
   rw [mul_one, add_sub_cancel' x d], -- or, ring
 end
 
-/- A similar proof: prove that for all a, b, c ∈ ℕ, if a ∣ b and a ∣ c, 
+/- A similar proof: prove that for a, b, c ∈ ℕ, if a ∣ b and a ∣ c, 
    then a ∣ (b + c). -/
 example (divab : a ∣ b) (divac : a ∣ c) : a ∣ (b + c) :=
 begin 
