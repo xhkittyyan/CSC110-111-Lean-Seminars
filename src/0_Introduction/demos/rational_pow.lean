@@ -8,14 +8,13 @@ def rational (x : ℝ) := ∃ a b : ℤ, x = ↑a / ↑b
 -- Prove that there exists a and b that are irrationals such that a ^ b is rational.
 example : ∃ a b : ℝ, irrational a ∧ irrational b ∧ rational (a ^ b) :=
 /- A paper-pencil proof:
-   Let c = √2 ^ √2. 
-   Since c is either rational or not rational, we have two cases:
-   Case 1, take a = b = √2. Then a and b are irrational and, by hypothesis, 
-    a ^ b = c is rational.
-   Case 2, take a = c and b = √2 and let d = a ^ b.
-      a = c is irrational, since c is not rational.
-      b = √2 is irrational.
-      d = (√2 ^ √2) ^ √2 = √2 ^ (√2 * √2) = 2 is rational.
+   Let a = b = √2.
+   Since a ^ b is either rational or not rational, we have two cases:
+   Case 1, if a ^ b is rational, then the result is proved.  
+   Case 2, if a ^ b is irrational, take c = √2.
+      (a ^ b) ^ c = (√2 ^ √2) ^ √2 = √2 ^ (√2 * √2) = 2, which is rational.
+  In any case, we proved that there exists a and b that are irrationals such that 
+  a ^ b is rational. 
    Q.E.D.
 -/
 begin
