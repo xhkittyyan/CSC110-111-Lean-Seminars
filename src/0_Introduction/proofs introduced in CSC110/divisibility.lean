@@ -1,11 +1,10 @@
 import tactic 
 open nat 
 
-variables {n d : ℤ} 
-#check one_mul
-#check @le_self_mul 
+variables {m n d : ℤ} 
+#check one_mul 
 
-example : (1 ∣ n) :=
+example : 1 ∣ n :=
 begin
   use n,
   rw one_mul,

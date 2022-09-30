@@ -6,7 +6,7 @@ import tactic
 #check add_sub_cancel'
 
 variables {x d f g : ℤ}
-variables {a b c : ℕ}
+variables {a b c e m n t : ℕ}
 
 -- BEGIN
 /- Prove that for x, d ∈ ℤ, if x divides x + d, 
@@ -38,5 +38,15 @@ begin
   rw [beq, ceq],
   rw ← mul_add,
   use (d + e),
+end
+
+example (h : t ∣ m) (h' : t ∣ n) : t ∣ a * m + b * n := 
+begin 
+  cases h with c hc,
+  cases h' with e he,
+  rw [hc, he],
+  rw [mul_comm, mul_assoc, mul_comm b, mul_assoc t],
+  rw ← mul_add,
+  use (c * a + e * b),
 end
 -- END
