@@ -13,10 +13,10 @@ variables A B P Q: Prop
 example (A B : Prop) : (A → B) ↔ (¬ B → ¬ A) := 
 begin
     split,
-    intros hab nb,
-      { sorry, },   
-    intros hnba ha,
-      { sorry, },   
+      { intros hab hnb,
+        sorry, },   
+      { intros hnba ha,
+        sorry, },   
 end
 
 /- Alternatively, a term proof -/

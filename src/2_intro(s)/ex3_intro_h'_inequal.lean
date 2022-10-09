@@ -9,6 +9,7 @@ Tactics you may consider
 -/
 
 #check le_antisymm
+#check mul_eq_zero.mp
 
 -- BEGIN
 example {x y : ℝ} (h₀ : x ≤ y) (h₁ : ¬ y ≤ x) : ¬ x = y :=
@@ -49,5 +50,17 @@ end
 
 example {x y : ℝ} (h : x ≤ y ∧ x ≠ y) : ¬ y ≤ x :=
 λ h', h.right (le_antisymm h.left h')
+
+example {a b : ℕ } : a ≠ 0 → b ≠ 0 → a * b ≠ 0 := 
+begin
+  intros ha hb,
+  intro hab,
+    apply ha,
+    
+
+
+    
+end 
+
 
 -- END
