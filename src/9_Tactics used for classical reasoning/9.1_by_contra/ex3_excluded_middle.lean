@@ -1,6 +1,6 @@
 open classical 
 
-variables A B P Q: Prop
+variables A B : Prop
 
 /- Tactics you may consider
 -intro
@@ -12,11 +12,7 @@ variables A B P Q: Prop
 
 example (A B : Prop) : (A → B) ↔ (¬ B → ¬ A) := 
 begin
-    split,
-      { intros hab hnb,
-        sorry, },   
-      { intros hnba ha,
-        sorry, },   
+    sorry,   
 end
 
 /- Alternatively, a term proof -/
