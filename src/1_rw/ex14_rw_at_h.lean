@@ -11,13 +11,13 @@ variables a b c d : ℝ
 /- The rewrite tactic affects only the goal. The notation rw t at h 
 applies the rewrite t at hypothesis h. -/
 
-example (a b c d : ℝ) (hyp : c = d * a + b) (hyp' : b = a * d) :
+example (a b c d : ℝ) (h : c = d * a + b) (h' : b = a * d) :
   c = 2 * a * d :=
 begin
-  rw hyp' at hyp,
-  rw mul_comm d a at hyp,
-  rw ← two_mul (a * d) at hyp,
-  rw ← mul_assoc 2 a d at hyp,
-  exact hyp,
+  rw h' at h,
+  rw mul_comm d a at h,
+  rw ← two_mul (a * d) at h,
+  rw ← mul_assoc 2 a d at h,
+  exact h,
 end
 -- END
