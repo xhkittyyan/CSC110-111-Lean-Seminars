@@ -12,7 +12,12 @@ variables A B : Prop
 
 example (A B : Prop) : (A → B) ↔ (¬ B → ¬ A) := 
 begin
-    sorry,   
+    split,
+     { intros hab hnb, 
+       by_contra h,
+       apply hnb,
+       exact hab h, },
+     { sorry, },
 end
 
 /- Alternatively, a term proof -/
